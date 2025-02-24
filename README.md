@@ -67,7 +67,7 @@ pnpm dev
 ├── .npmrc
 ├── README.md
 ├── apps/
-│   ├── backend/
+│   ├── backendd/          
 │   │   ├── README.md
 │   │   ├── Stampede_detection system
 │   │   ├── src/
