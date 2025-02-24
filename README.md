@@ -3,7 +3,7 @@
  2 ki "backendd" ye hai sahi wala folder jisme poora backend hai...to aviral --> isme python me routing stuffs dekh lo ek baar routes work karne lage tab hum usko frontend me integrate kare..
  3 isme hamne "main.py" ko nhi touch kia...instead i have done all routing stuffs inside new file "websocket_server.py" to "main.py" work kar rha as it were...aur route work kar rha...uske liye postman ka use kar lena... basss baaki other files me issue aaaye to batana....sab (Amit, Aviral)
 
-<-------------------------------------bass yehi itna batana tha..baaki neeche init ka process hai......enjoyeee---------------------------------------------->
+<-------------------------------------bass yehi itna batana tha..baaki neeche init ka process hai......enjoyeee--------------------------------------->
 
 
 
