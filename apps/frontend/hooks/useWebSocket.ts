@@ -1,19 +1,30 @@
 import { useState, useEffect } from "react";
+import { io } from "socket.io-client";
 
-const useWebSocket = (url: string) => {
-  const [data, setData] = useState(null);
+const SERVER_URL = "ws://127.0.0.1:5000"; // Ya phir "ws://192.168.1.34:5000"
+
+export const useWebSocket = () => {
+  const [frame, setFrame] = useState<string | null>(null);
 
   useEffect(() => {
-    const socket = new WebSocket(url);
+    const socket = io(SERVER_URL);
 
-    socket.onmessage = (event) => {
-      setData(JSON.parse(event.data));
+    socket.on("connect", () => {
+      console.log("Connected to WebSocket Server ✅");
+    });
+
+    socket.on("video_frame", (data) => {
+      setFrame(`data:image/jpeg;base64,${data.frame}`);
+    });
+
+    socket.on("disconnect", () => {
+      console.log("Disconnected ❌");
+    });
+
+    return () => {
+      socket.disconnect();
     };
+  }, []);
 
-    return () => socket.close();
-  }, [url]);
-
-  return data;
+  return frame;
 };
-
-export default useWebSocket;
