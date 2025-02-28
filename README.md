@@ -1,14 +1,3 @@
-# first thing you have to ensure
- 1 ki yaha "backend" ka folder bekaar hai delete nhi ho rha...to ignore maaro...usko
- 2 ki "backendd" ye hai sahi wala folder jisme poora backend hai...to aviral --> isme python me routing stuffs dekh lo ek baar routes work karne lage tab hum usko frontend me integrate kare..
- 3 isme hamne "main.py" ko nhi touch kia...instead i have done all routing stuffs inside new file "websocket_server.py" to "main.py" work kar rha as it were...aur route work kar rha...uske liye postman ka use kar lena... basss baaki other files me issue aaaye to batana....sab (Amit, Aviral)
-
-<-------------------------------------bass yehi itna batana tha..baaki neeche init ka process hai......enjoyeee--------------------------------------->
-
-
-
-
-
 # Turborepo starter
 
 This Turborepo starter is maintained by the Turborepo core team.
@@ -75,31 +64,16 @@ pnpm dev
 │   │   │   ├── stampede_detection_results.csv
 │   │   │   ├── stampede_detector.py
 │   │   │   └── visualization.py
+│   │   │   └── websocket_server.py               <---this is the main file to start backend
 │   │   ├── stampede_events.log
 │   │   └── yolov8n.pt
-│   ├── docs/
-│   │   ├── .gitignore
-│   │   ├── README.md
-│   │   ├── app/
-│   │   │   ├── fonts/
-│   │   │   │   ├── GeistMonoVF.woff
-│   │   │   │   └── GeistVF.woff
-│   │   │   ├── globals.css
-│   │   │   ├── layout.tsx
-│   │   │   └── page.module.css
-│   │   │   └── page.tsx
-│   │   ├── eslint.config.js
-│   │   ├── next-env.d.ts
-│   │   ├── next.config.js
-│   │   ├── package.json
-│   │   └── tsconfig.json
-│   ├── frontend/
+│   ├── frontend/                                 <---- to run FE use "npm run dev"
 │   │   ├── .gitignore
 │   │   ├── README.md
 │   │   ├── app/
 │   │   │   ├── globals.css
 │   │   │   ├── layout.tsx
-│   │   │   └── page.tsx
+│   │   │   └── page.tsx       
 │   │   ├── eslint.config.mjs
 │   │   ├── next-env.d.ts
 │   │   ├── next.config.ts
@@ -110,22 +84,6 @@ pnpm dev
 │   │   ├── public/
 │   │   ├── tailwind.config.ts
 │   │   └── tsconfig.json
-│   └── web/
-│       ├── .gitignore
-│       ├── README.md
-│       ├── app/
-│       │   ├── fonts/
-│       │   │   ├── GeistMonoVF.woff
-│       │   │   └── GeistVF.woff
-│       │   ├── globals.css
-│       │   ├── layout.tsx
-│       │   └── page.module.css
-│       │   └── page.tsx
-│       ├── eslint.config.js
-│       ├── next-env.d.ts
-│       ├── next.config.js
-│       ├── package.json
-│       └── tsconfig.json
 ├── package.json
 ├── packages/
 │   ├── eslint-config/
