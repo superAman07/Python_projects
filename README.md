@@ -56,7 +56,7 @@ pnpm dev
 ├── .npmrc
 ├── README.md
 ├── apps/
-│   ├── backendd/          
+│   ├── backendd/                         <--- remember "backend" is redundant so try to run "backendd" in the main tree after clone repo on your local   
 │   │   ├── README.md
 │   │   ├── Stampede_detection system
 │   │   ├── src/
