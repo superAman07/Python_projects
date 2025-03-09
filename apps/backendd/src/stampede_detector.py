@@ -143,10 +143,13 @@ class StampedeDetector:
             stampede_probability=probability,
             new_weapon_detected=new_weapon_detected
         )
-        
+        logs = f"Probability: {probability:.1f}% | People: {people_count} | Speed: {movement_speed:.2f} | Panic: {panic_count} | Objects: {', '.join(weapons)}"
+
         if probability > 70 or new_weapon_detected:
-            logging.warning(f"{'NEW WEAPON DETECTED! ' if new_weapon_detected else ''}High stampede risk detected! Probability: {probability:.1f}% People: {people_count} Speed: {movement_speed:.2f} Panic: {panic_count} Objects: {', '.join(weapons)}")
-        
-        self.results_df.loc[len(self.results_df)] = [result.timestamp, result.people_count, result.movement_speed, result.panic_expressions, result.weapons_detected, result.stampede_probability]
-        
-        return result, boxes
+            logging.warning(f"{'NEW WEAPON DETECTED! ' if new_weapon_detected else ''}High stampede risk detected! {logs}")
+
+        self.results_df.loc[len(self.results_df)] = [
+            result.timestamp, result.people_count, result.movement_speed, 
+            result.panic_expressions, result.weapons_detected, result.stampede_probability
+        ]
+        return result, boxes, logs 
